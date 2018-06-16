@@ -43,4 +43,5 @@ Schema.pre('save', function (next) {
         callback(null, matches);
       });
   };
-  
+
+mongoose.model('Entreprise', Schema);

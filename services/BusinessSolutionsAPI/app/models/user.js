@@ -43,4 +43,7 @@ Schema.methods.comparePassword = function (password, callback) {
       callback(null, matches);
     });
 };
+
+mongoose.model('User', Schema);
+
   
