@@ -20,8 +20,8 @@ app.use(passport.initialize());
 app.set(process.env.JWTSecret, config.secret);
 
 consign({ cwd: 'services' })
-      .include('BusinessSolutionAPI/app/setup')
-      .then('BusinessSolutionAPI/app/api')
-      .then('BusinessSolutionAPI/app/routes')
+      .include('BusinessSolutionAPI/app/setup/index.js')
+      .then('BusinessSolutionAPI/app/api/userAuth.js')
+      .then('BusinessSolutionAPI/app/routes/userAuth.js')
       .into(app);
 module.exports = app;

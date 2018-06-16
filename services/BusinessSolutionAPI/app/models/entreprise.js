@@ -12,7 +12,7 @@ const Schema = mongoose.Schema({
         required: true
     },
     tel: {
-        type: string,
+        type: String,
         required: true  
     },
     password: {

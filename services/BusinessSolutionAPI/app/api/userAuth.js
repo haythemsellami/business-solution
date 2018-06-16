@@ -4,6 +4,22 @@ const mongoose = require('mongoose'),
 
 const api = {};
 
+//Test method
+api.setup = (User) => (req, res) => {
+    const admin = new User({
+      username: 'admin',
+      firstname: 'admin',
+      lastname: 'admin',
+      password: 'admin'
+    });
+  admin.save(error => {
+      if (error) throw error;
+  console.log('Admin account was succesfully set up');
+      res.json({ success: true });
+    })
+  }
+  
+
 //Login method
 api.login = (User) => (req, res) => {
     User.findOne({ username: req.body.username }, (error, user) => {

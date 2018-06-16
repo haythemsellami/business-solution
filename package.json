@@ -34,11 +34,11 @@
     "url": "https://github.com/haythem96/business-solution/issues"
   },
   "homepage": "https://github.com/haythem96/business-solution#readme",
-
   "_moduleAliases": {
     "@root": ".",
     "@models": "./services/BusinessSolutionAPI/app/models",
     "@BusinessSolutionAPI": "./services/BusinessSolutionAPI/config/app.js",
-    "@config": "./services/BusinessSolutionAPI/config/index.js"
+    "@config": "./services/BusinessSolutionAPI/config/index.js",
+    "@BusinessSolution": "./services/BusinessSolutionAPI"
   }
 }
