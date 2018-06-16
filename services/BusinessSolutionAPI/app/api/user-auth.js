@@ -59,6 +59,18 @@ api.signup = (User) => (req, res) => {
     }
 }
   
+api.index = (User, BudgetToken) => (req, res) => {
+    const token = BudgetToken;
+    if (token) {
+        User.find({}, (error, users) => {
+            if (error) throw error;
+            res.status(200).json(users);
+        });
+    } 
+    else {
+        return res.status(403).send({ success: false, message: 'Unauthorized' });
+    }
+}
 
 module.exports = api;
 
