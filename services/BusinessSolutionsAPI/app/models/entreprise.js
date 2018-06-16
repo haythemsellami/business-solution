@@ -2,16 +2,16 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const Schema = mongoose.Schema({
-    username: {
+    entrepriseName: {
         type: String,
         unique: true,
         required: true
     },
-    firstName: {
+    address: {
         type: String,
         required: true
     },
-    lastName: {
+    tel: {
         type: string,
         required: true  
     },
