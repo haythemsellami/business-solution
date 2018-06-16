@@ -1,7 +1,7 @@
 require('module-alias/register');
 const http = require('http'),
     BusinessSolutionAPI = require('@BusinessSolutionAPI'),
-    BusinessSolutionServer = http.Server(BusinessSolutionAPI),
+    BusinessSolutionServer = http.Server(),
     BusinessSolutionPORT = process.env.PORT || 3001,
     LOCAL = '0.0.0.0';
 
