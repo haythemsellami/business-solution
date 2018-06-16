@@ -38,6 +38,7 @@
   "_moduleAliases": {
     "@root": ".",
     "@models": "./services/BusinessSolutionAPI/app/models",
-    "@BusinessSolutionAPI": "./services/BusinessSolutionAPI/config/app.js"
+    "@BusinessSolutionAPI": "./services/BusinessSolutionAPI/config/app.js",
+    "@config": "./services/BusinessSolutionAPI/config/index.js"
   }
 }
