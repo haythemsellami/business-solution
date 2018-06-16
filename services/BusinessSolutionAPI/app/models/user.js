@@ -12,7 +12,7 @@ const Schema = mongoose.Schema({
         required: true
     },
     lastName: {
-        type: string,
+        type: String,
         required: true  
     },
     password: {
