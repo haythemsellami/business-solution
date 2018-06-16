@@ -36,7 +36,7 @@
   "homepage": "https://github.com/haythem96/business-solution#readme",
   "_moduleAliases": {
     "@root": ".",
-    "@models": "services/BusinessSolutionsAPI/app/models",
-    "@BusinessSolutionAPI": "./services/BusinessSolutionsAPI/config/app.js"
+    "@models": "services/BusinessSolutionAPI/app/models",
+    "@BusinessSolutionAPI": "./services/BusinessSolutionAPI/config/app.js"
   }
 }

@@ -1,5 +1,5 @@
 const PassportJWT = require('passport-jwt');
-const ExtractJWT = PassportJWT.Extract;Jwt;
+const ExtractJWT = PassportJWT.Extract;
 const Strategy = PassportJWT.Strategy;
 const config = require('./index.js');
 const models = require('@models');
