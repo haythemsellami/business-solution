@@ -1,0 +1,12 @@
+const express = require('express'),
+      app = express(),
+      bodyParser = require('body-parser'),
+      mongoose = require('mongoose'),
+      morgan = require('morgan'),
+      consign = require('consign'),
+      cors = require('cors'),
+      passport = require('passport'),
+      passportConfig = require('./passport')(passport),
+      jwt = require('jsonwebtoken'),
+      config = require('./index.js'),
+      database = require('./database')(mongoose, config);
