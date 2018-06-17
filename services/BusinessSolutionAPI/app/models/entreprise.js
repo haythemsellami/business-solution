@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const Schema = mongoose.Schema({
+var Schema = mongoose.Schema;
+entrepriseSchema = Schema({
     entrepriseName: {
         type: String,
         unique: true,
@@ -18,10 +19,18 @@ const Schema = mongoose.Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+
+    users: [
+        { 
+            type: Schema.Types.ObjectId, 
+            ref: 'User' 
+        }
+    ]
+
 });
 
-Schema.pre('save', function (next) {
+entrepriseSchema.pre('save', function (next) {
     const user = this;
     if (this.isModified('password') || this.isNew) {
       bcrypt.genSalt(10, (error, salt) => {
@@ -37,11 +46,11 @@ Schema.pre('save', function (next) {
     }
   });
   
-  Schema.methods.comparePassword = function (password, callback) {
-      bcrypt.compare(password, this.password, (error, matches) => {
+entrepriseSchema.methods.comparePassword = function (password, callback) {
+    bcrypt.compare(password, this.password, (error, matches) => {
         if (error) return callback(error);
         callback(null, matches);
-      });
-  };
+    });
+};
 
-mongoose.model('Entreprise', Schema);
+mongoose.model('Entreprise', entrepriseSchema);
