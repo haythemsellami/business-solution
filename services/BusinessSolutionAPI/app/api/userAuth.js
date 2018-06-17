@@ -75,8 +75,8 @@ api.signup = (User) => (req, res) => {
     }
 }
   
-api.index = (User, BudgetToken) => (req, res) => {
-    const token = BudgetToken;
+api.index = (User, BusinessToken) => (req, res) => {
+    const token = BusinessToken;
     if (token) {
         User.find({}, (error, users) => {
             if (error) throw error;
