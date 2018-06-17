@@ -10,15 +10,15 @@ module.exports = (app) => {
   app.route('/')
   .get((req, res) => res.send('Business Solution API'));
 
-  app.route('/api/v1/setup')
+  app.route('/v1/setup')
   .post(api.setup(models.User))
   
-  app.route('/api/v1/users')
+  app.route('/v1/users')
   .get(passport.authenticate('jwt', config.session),  api.index(models.User, app.get(process.env.JWTSecret)));
 
-  app.route('/api/v1/signup')
+  app.route('/v1/signup')
   .post(api.signup(models.User));
 
-  app.route('/api/v1/auth')
+  app.route('/v1/auth')
   .post(api.login(user));
 }
