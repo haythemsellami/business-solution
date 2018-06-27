@@ -23,5 +23,7 @@ consign({ cwd: 'services' })
       .include('BusinessSolutionAPI/app/setup/index.js')
       .then('BusinessSolutionAPI/app/api/userAuth.js')
       .then('BusinessSolutionAPI/app/routes/userAuth.js')
+      .then('BusinessSolutionAPI/app/api/entrepriseAuth.js')
+      .then('BusinessSolutionAPI/app/routes/entrepriseAuth.js')
       .into(app);
 module.exports = app;

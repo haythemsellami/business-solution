@@ -52,7 +52,7 @@ api.signup = (Entreprise) => (req, res) => {
         tel: req.body.tel,
         password: req.body.password
       });
-      newUser.save((error) => {
+      newEntreprise.save((error) => {
         if (error) return res.status(400).json({ success: false, message:  'Entreprise name already exists.' });
         res.json({ success: true, message: 'Account created successfully' });
       })
